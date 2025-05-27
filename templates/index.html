@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Linear regression plot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .stats {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .stats p {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .stats p strong {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Linear Regression Analysis</h1>
+
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Linear Regression Plot">
+
+        <div class="stats">
+            <h2>Regression Statistics:</h2>
+            <p><strong>Slope:</strong> {{ slope }}</p>
+            <p><strong>Y-intercept:</strong> {{ intercept }}</p>
+            <p><strong>R-value (Correlation Coefficient):</strong> {{ r_value }}</p>
+            <p><strong>P-value:</strong> {{ p_value }}</p>
+            <p><strong>Standard Error:</strong> {{ std_err }}</p>
+
+            <p>
+                The R-value (correlation coefficient) indicates the strength and direction of the linear relationship.
+                <br>
+                A value closer to 1 or -1 means a strong linear relationship.
+                <br>
+                The P-value suggests the statistical significance of the relationship. A value typically below 0.05 indicates
+                a statistically significant relationship.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
