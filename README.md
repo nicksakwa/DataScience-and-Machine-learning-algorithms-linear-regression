@@ -11,6 +11,9 @@ Before diving into this repository, ensure you have the following installed:
 
 1.  **Python:** Which you can download from the [official Python website](https://www.python.org/downloads/).
 2.  **Pandas:** Install the library using pip in your bash terminal or your directory:
+3.  **Matplotlib:** For plotting graphs
+4.  **Scipy:**For our scientific mathematical calculations
+5.  **Flask:** For displaying our linear regression chart
     ```bash
     pip install pandas matplotlib scipy flask
     ```
